@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polarislink"
+version = "2.6.1"
+description = "Official Institutional Client SDK for Forticia PolarisLink™ Quantitative Wire Protocol"
+readme = "README.md"
+authors = [
+    { name = "Forticia Research Institute", email = "research@forticia.uk" }
+]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = [
+    "quantitative-finance",
+    "market-data",
+    "options-microstructure",
+    "polarislink",
+    "forticia",
+    "algorithmic-trading",
+    "backtest-telemetry"
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.3.0"]
+test = ["pytest>=7.0.0"]
+
+[project.scripts]
+polarislink = "polarislink.client:_cli_main"
+
+[project.urls]
+Homepage = "https://forticia.uk"
+Documentation = "https://github.com/Forticia/polarislink"
+Repository = "https://github.com/Forticia/polarislink.git"
+"Specification" = "https://forticia.uk/api/polarislink/spec"
